@@ -36,6 +36,9 @@ group :development do
   gem 'binding_of_caller'
   # エラー画面をリッチに
   gem 'better_errors'
+
+  # ngrokだとbetter_errros効かない？のでデバッグ用に
+  gem 'pry-rails'
 end
 
 group :test do
