@@ -57,3 +57,6 @@ gem 'omniauth'
 gem 'omniauth-oauth2'
 gem 'omniauth-twitter'
 gem "omniauth-rails_csrf_protection"
+
+# DB
+gem 'mysql2'
