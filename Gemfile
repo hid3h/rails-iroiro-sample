@@ -20,6 +20,9 @@ gem 'bootsnap', '>= 1.4.4', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+
+  # .envファイルで環境変数
+  gem 'dotenv-rails'
 end
 
 group :development do
