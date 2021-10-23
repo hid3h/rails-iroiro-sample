@@ -62,6 +62,9 @@ GEM
       zeitwerk (~> 2.3)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    armg (0.9.0)
+      activerecord (>= 5, < 7)
+      rgeo
     better_errors (2.9.1)
       coderay (>= 1.0.0)
       erubi (>= 1.0.0)
@@ -199,6 +202,7 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     regexp_parser (2.1.1)
+    rgeo (2.3.0)
     ruby2_keywords (0.0.4)
     rubyzip (2.3.0)
     sass-rails (6.0.0)
@@ -246,6 +250,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  armg
   better_errors
   binding_of_caller
   bootsnap (>= 1.4.4)

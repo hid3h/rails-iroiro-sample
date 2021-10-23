@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_04_015522) do
+ActiveRecord::Schema.define(version: 2021_09_18_085810) do
 
   create_table "delete_all_children", charset: "utf8mb4", force: :cascade do |t|
     t.bigint "delete_all_parent_id", null: false
@@ -18,6 +18,12 @@ ActiveRecord::Schema.define(version: 2021_09_04_015522) do
   end
 
   create_table "delete_all_parents", charset: "utf8mb4", force: :cascade do |t|
+  end
+
+  create_table "geoms", charset: "utf8mb4", force: :cascade do |t|
+    t.geometry "location", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   add_foreign_key "delete_all_children", "delete_all_parents"
