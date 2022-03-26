@@ -63,3 +63,6 @@ gem "omniauth-rails_csrf_protection"
 
 # DB
 gem 'mysql2'
+
+# xlsx
+gem 'rubyXL', '~> 3.4.18'
