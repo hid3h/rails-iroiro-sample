@@ -255,6 +255,7 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   dotenv-rails
+  faraday
   jbuilder (~> 2.7)
   listen (~> 3.3)
   mysql2

@@ -66,3 +66,6 @@ gem 'mysql2'
 
 # xlsx
 gem 'rubyXL', '~> 3.4.18'
+
+# リクエスト
+gem "faraday"
