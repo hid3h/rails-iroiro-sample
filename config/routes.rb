@@ -3,4 +3,12 @@ Rails.application.routes.draw do
   get '/', to: 'test#index'
   get '/delete_all', to: 'delete_all#index'
   get '/auth/line/callback', to: 'sessions#create'
+
+  namespace :auth do
+    resource :salesforce, only: [:create], controller: 'salesforce' do
+      collection do
+        get "callback"
+      end
+    end
+  end
 end
