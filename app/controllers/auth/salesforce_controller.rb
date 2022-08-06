@@ -12,7 +12,8 @@ class Auth::SalesforceController < ApplicationController
     redirect_to(uri.to_s)
   end
 
-  def calback
-
+  def callback
+    code = params[:code]
+    salesforce_oauth = SalesforceOauth.retrieve_access_token(code)
   end
 end
