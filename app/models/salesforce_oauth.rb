@@ -2,8 +2,20 @@ class SalesforceOauth
   attr_reader :access_token
 
   ACCESS_TOKEN_REQUEST_ENDPONT = "https://login.salesforce.com/services/oauth2/token"
+  AUTHORIZE_ENDPOINT = "https://login.salesforce.com/services/oauth2/authorize"
 
   class << self
+    def oauth_authorize_url
+      uri = URI(AUTHORIZE_ENDPOINT)
+      uri.query = {
+        response_type: "code",
+        client_id: ENV["SALESFORCE_CLIENT_ID"],
+        redirect_uri: redirect_uri
+      }.to_query
+
+      uri.to_s
+    end
+
     def retrieve_access_token(code)
       uri = URI(ACCESS_TOKEN_REQUEST_ENDPONT)
       conn = Faraday.new(
